@@ -6,11 +6,13 @@ body {
     position: sticky;
     top: 0;
     background-color: rgb(83, 228, 228);
-    padding: 2rem 1rem;
+    padding: 1rem;
     width: 100%;
+    height: 20vh;
     display: flex;
     align-items: center;
     z-index: 100;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .menu ul {
@@ -26,17 +28,27 @@ body {
 }
 
 .menu ul li a {
+    display: inline-block;
     text-decoration: none;
+    background-color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
 }
 
+.menu ul li a:hover {
+    transform: scale(1.1);
+}
 
 #logo {
-    width: 9%;
+    height: 15vh;
 }
 
 header {
     position: absolute;
-    top: 20%;
+    top: 40%;
     left: 3vw;
     font-size: 26px;
 }
@@ -48,6 +60,57 @@ header>h2 {
 }
 
 #background {
+    height: 80vh;
     width: 100%;
-    height: auto;
+    object-fit: cover;
+    object-position: top;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    width: 80%;
+    margin: 2rem auto 4rem;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    margin-top: auto;
+    color: #666;
+    font-size: 0.95rem;
 }
