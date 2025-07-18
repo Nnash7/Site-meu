@@ -12,14 +12,26 @@
 
 <body>
     <nav class="menu">
-        <a href="./index.html"> <img id="logo" src="./Images/logo2.jpg.jpg" alt="logo"></a>
-        <ul>
+        <a href="./index.html">
+            <img id="logo" src="./Images/logo2.jpg.jpg" alt="logo">
+        </a>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Side Menu -->
+        <ul class="menu-links" id="menuLinks">
             <li><a href="./marine-mammal.html">Marine-mammals</a></li>
             <li><a href="./Ocean-fishes.html">Ocean Fishes</a></li>
-            <li><a href="">Seabirds</a></li>
-            <li><a href="">Sharks and Rays</a></li>
+            <li><a href="#">Seabirds</a></li>
+            <li><a href="#">Sharks and Rays</a></li>
         </ul>
     </nav>
+
 
     <main class="mainMammals">
         <div class="card-container">
@@ -146,6 +158,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
         integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
         crossorigin="anonymous"></script>
+    <script src="./js/menu.js"></script>
+
 </body>
 
 </html>

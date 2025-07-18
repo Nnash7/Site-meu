@@ -2,6 +2,23 @@ body {
     margin: 0;
 }
 
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
 .menu {
     position: sticky;
     top: 0;
@@ -15,12 +32,13 @@ body {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-.menu ul {
+/* Slide-in Menu (Mobile) */
+.menu .menu-links {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 0;
     width: 90%;
+    margin: 0;
 }
 
 .menu ul li {
@@ -76,6 +94,8 @@ header>h2 {
     padding: 5rem;
 }
 
+
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -122,4 +142,42 @@ header>h2 {
 .card-text {
     color: #666;
     font-size: 0.95rem;
+}
+
+
+@media screen and (max-width: 750px) {
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .menu .menu-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 70%;
+        background-color: rgb(83, 228, 228);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 100px;
+        transition: left 0.3s ease;
+        z-index: 150;
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu .menu-links li {
+        margin: 1rem;
+    }
+
+    .menu .menu-links li a {
+        display: block;
+        text-align: left;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .menu .menu-links.active {
+        left: 0;
+    }
 }
